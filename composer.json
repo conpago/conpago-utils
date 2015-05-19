@@ -1,6 +1,6 @@
 {
 	"name": "saigon/conpago-utils",
-	"description": "Conpago.Utils",
+	"description": "Conpago framework common utilities.",
 	"version": "0.0.1-alpha",
 	"type": "library",
 	"license": "MIT",
