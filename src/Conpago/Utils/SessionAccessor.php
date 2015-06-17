@@ -6,12 +6,12 @@
 	 * Time: 12:51
 	 */
 
-	namespace Saigon\Conpago\Utils;
+	namespace Conpago\Utils;
 
 	/**
 	 * Class SessionAccessor
 	 *
-	 * @package Saigon\Conpago\Utils
+	 * @package Conpago\Utils
 	 *
 	 * @SuppressWarnings(PHPMD)
 	 */

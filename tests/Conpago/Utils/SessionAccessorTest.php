@@ -6,7 +6,7 @@
 	 * Time: 14:05
 	 */
 
-	namespace Saigon\Conpago\Utils;
+	namespace Conpago\Utils;
 
 	class SessionAccessorTest extends \PHPUnit_Framework_TestCase
 	{

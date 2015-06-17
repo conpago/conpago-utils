@@ -6,7 +6,7 @@
 	 * Time: 12:09
 	 */
 
-	namespace Saigon\Conpago\Utils;
+	namespace Conpago\Utils;
 
 	class ServerAccessor
 	{

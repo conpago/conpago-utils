@@ -1,5 +1,5 @@
 {
-	"name": "saigon/conpago-utils",
+	"name": "conpago/conpago-utils",
 	"description": "Conpago framework common utilities.",
 	"version": "0.0.1-alpha",
 	"type": "library",
@@ -24,7 +24,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Saigon\\Conpago\\Utils\\": "src/"
+			"Conpago\\Utils\\": "src/"
 		}
 	}
 }

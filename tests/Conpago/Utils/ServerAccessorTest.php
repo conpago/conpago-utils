@@ -6,7 +6,7 @@
  * Time: 10:36
  */
 
-namespace Saigon\Conpago\Utils;
+namespace Conpago\Utils;
 
 
 class ServerAccessorTest extends \PHPUnit_Framework_TestCase {
