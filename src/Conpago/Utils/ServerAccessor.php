@@ -1,27 +1,29 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: Bartosz Gołek
-	 * Date: 2014-06-15
-	 * Time: 12:09
-	 */
+namespace Conpago\Utils;
 
-	namespace Conpago\Utils;
+class ServerAccessor
+{
+    /**
+     * @param mixed $key
+     *
+     * @return bool
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
+    public function contains($key): bool
+    {
+        return $_SERVER != null && array_key_exists($key, $_SERVER);
+    }
 
-	class ServerAccessor
-	{
-		/**
-		 * @param $key
-		 *
-		 * @return bool
-		 */
-		function contains($key)
-		{
-			return $_SERVER != null && array_key_exists($key, $_SERVER);
-		}
-
-		function getValue($key)
-		{
-			return $_SERVER[$key];
-		}
-	}
+    /**
+     * @param mixed $key
+     *
+     * @return mixed
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
+    public function getValue($key)
+    {
+        return $_SERVER[$key];
+    }
+}

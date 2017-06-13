@@ -1,44 +1,45 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: Bartosz Gołek
-	 * Date: 2014-06-15
-	 * Time: 12:51
-	 */
+namespace Conpago\Utils;
 
-	namespace Conpago\Utils;
+/**
+ * Class SessionAccessor
+ */
+class SessionAccessor
+{
+    /**
+     * @param mixed $name
+     *
+     * @return bool
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
+    public function contains($name): bool
+    {
+        return $_SESSION != null && array_key_exists($name, $_SESSION);
+    }
 
-	/**
-	 * Class SessionAccessor
-	 *
-	 * @package Conpago\Utils
-	 *
-	 * @SuppressWarnings(PHPMD)
-	 */
-	class SessionAccessor
-	{
-		/**
-		 * @param $key
-		 *
-		 * @return bool
-		 */
-		function contains($key)
-		{
-			return $_SESSION != null && array_key_exists($key, $_SESSION);
-		}
+    /**
+     * @param mixed $key
+     *
+     * @return mixed
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
+    public function getValue($key)
+    {
+        return $_SESSION[$key];
+    }
 
-		/**
-		 * @param string $name
-		 *
-		 * @return mixed
-		 */
-		public function getValue($name)
-		{
-			return $_SESSION[$name];
-		}
-
-		public function setValue($name, $value)
-		{
-			$_SESSION[$name] = $value;
-		}
-	}
+    /**
+     * @param mixed $name
+     * @param mixed $value
+     *
+     * @return void
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
+    public function setValue($name, $value): void
+    {
+        $_SESSION[$name] = $value;
+    }
+}
