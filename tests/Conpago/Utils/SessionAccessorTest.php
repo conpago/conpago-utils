@@ -1,24 +1,25 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: bgolek
-     * Date: 2014-10-08
-     * Time: 14:05
-     */
+namespace Conpago\Utils;
 
-    namespace Conpago\Utils;
+use PHPUnit\Framework\TestCase;
 
-class SessionAccessorTest extends \PHPUnit_Framework_TestCase
+class SessionAccessorTest extends TestCase
 {
     const KEY_NAME = 'xxx';
 
     const KEY_VALUE = 'a';
 
+    /**
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
     protected function setUp()
     {
         $GLOBALS['_SESSION'] = array();
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
     public function testContains()
     {
         $sessionAccessor = new SessionAccessor();
@@ -27,6 +28,9 @@ class SessionAccessorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(true, $sessionAccessor->contains(self::KEY_NAME));
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
     public function testGetValue()
     {
         $_SESSION = array(self::KEY_NAME => self::KEY_VALUE);
@@ -34,6 +38,9 @@ class SessionAccessorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(self::KEY_VALUE, $sessionAccessor->getValue(self::KEY_NAME));
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
     public function testSetValue()
     {
         $_SESSION = array();
